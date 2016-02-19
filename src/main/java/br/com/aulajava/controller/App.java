@@ -1,4 +1,4 @@
-package br.com.aulajava;
+package br.com.aulajava.controller;
 
 /**
  * Hello world!
