@@ -1,16 +1,37 @@
 package br.com.aulajava;
 
 import br.com.aulajava.model.Usuario;
+
+import java.util.List;
+
 import br.com.aulajava.dao.UsuarioDAO;
 
 public class TestUsuarioDAO {
 
 	public static void main(String[] args) {
 		
-		Excluir();
+		//Excluir();
+		//testBuscarPorCodigo("002");
+		testBuscarTodos();
 
 	}
 
+	private static void testBuscarPorCodigo(String codigo) {
+		// TODO Auto-generated method stub
+		UsuarioDAO usuDAO = new UsuarioDAO();
+		Usuario usu = usuDAO.buscaPorCodigo(codigo);
+		System.out.println(usu);
+	}
+
+	private static void testBuscarTodos() {
+		// TODO Auto-generated method stub
+		UsuarioDAO usuDAO = new UsuarioDAO();
+		List<Usuario> usuarios = usuDAO.buscaTodos();
+		for (Usuario u: usuarios){
+			System.out.println(u);
+		}
+	}
+	
 	public static void Excluir(){
 		Usuario usu = new Usuario();
 		/**
@@ -43,5 +64,4 @@ public class TestUsuarioDAO {
 		
 		System.out.println("Cadastro com sucesso!");
 	}
-
 }

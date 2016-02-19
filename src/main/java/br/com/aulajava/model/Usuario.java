@@ -32,4 +32,9 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
+	@Override
+	public String toString() {
+		return "Usuario [codigo=" + codigo + ", nome=" + nome + ", login=" + login + ", senha=" + senha + "]";
+	}
+	
 }
